@@ -12,6 +12,7 @@ gem 'turbolinks', '~> 5'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'jsonapi-resources'
+gem 'pg'
 
 group :development, :test do
   gem 'pry-byebug'
