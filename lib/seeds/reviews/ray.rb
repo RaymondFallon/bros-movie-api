@@ -1,4 +1,4 @@
-ray = Bro.where(name: 'Ray Fallon')
+ray = Bro.where(name: 'Ray Fallon').first_or_create!
 
 [
   { title: 'Midsommar', description: "Religion is a Rorschach test. What was going on in this movie? I have no idea, but it was so beautiful it made me want to vomit. Annihilation with the militarism replaced by civil sociopathy.
