@@ -1,0 +1,9 @@
+frank = Bro.where(name: 'Frank Falisi')
+
+[
+  { title: 'Midsommar', description: "Here she comes boys, she's back on her Mary Queen of Scots bullshit. The first time I sat down for Midsommar, I walked out twenty minutes in, when the magnitude of Dani’s tragedy was getting swept aside so we could get into some ****art horror.*** But also I thought it may have been the day I was having, so I came back! In returning, I wanted to walk out a bunch more times. Unlike Hereditary (mad respect, feels an inch emptier after this slog) Midsommar proposes almost-too-much trauma not as something to be worked with (with hands filmically/ creationally, frame by frame by the fucking filmmaker) but as an excuse to lob shroom-addled shots at Christian/Pagan/ & hetero-norm/ taboo ideologies without deciding what any of that meant to poor Florence Pugh, who is working v v hard and doing v v good work. Also doing good work is Pawel Pogorzelski, whose frames and lights find the reasonable nightmares in our desparate dreams. But all that formal sweat and vigor for what? To flip the camera over to show you’ve seen The Shining? Anthropology, which gets a flimsy cameo, is the study of human beings as they relate to the culture they make in the systems they live in; Midsommar feels like a study of the system of a culture (horror movies) without much time spent on humans. Which inadvertently positions it opposite its yearly doppelganger, Us. OR: When our American/ London avatars wretch in reaction to the elders brutal leap from the cliffs we’re assured that there’s precedent for this. We’re assured that the brutality is in service of something greater that we’re too provincial to understand. And I think Ari Aster might respond the same way if I was to poke about Midsommar. " }
+].each do |review|
+  movie = Movie.find_by(title: review[:title])
+  Review.where(bro: frank, movie: movie)
+    .first_or_create!(review.except(:title))
+end
