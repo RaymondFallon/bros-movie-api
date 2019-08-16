@@ -4,4 +4,10 @@ class Review < ApplicationRecord
 
   belongs_to :movie
   belongs_to :bro
+
+  after_save :touch_movie
+
+  def touch_movie
+    movie.touch
+  end
 end

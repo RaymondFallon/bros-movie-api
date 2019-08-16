@@ -5,6 +5,8 @@ class CreateMovies < ActiveRecord::Migration[5.2]
       t.integer :year, limit: 4, null: false
       t.string :director,        null: false
       t.string :photo_url
+
+      t.timestamps
     end
   end
 end

@@ -5,4 +5,8 @@ class MovieResource < JSONAPI::Resource
   has_many :reviews
 
   filters :year, :title
+
+  def self.default_sort
+    [{field: 'updated_at', direction: :desc}]
+  end
 end

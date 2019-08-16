@@ -14,6 +14,8 @@ ActiveRecord::Schema.define(version: 2019_08_08_212139) do
 
   create_table "bros", force: :cascade do |t|
     t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "movies", force: :cascade do |t|
@@ -21,6 +23,8 @@ ActiveRecord::Schema.define(version: 2019_08_08_212139) do
     t.integer "year", limit: 4, null: false
     t.string "director", null: false
     t.string "photo_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -28,6 +32,8 @@ ActiveRecord::Schema.define(version: 2019_08_08_212139) do
     t.integer "bro_id", null: false
     t.string "description"
     t.string "grade"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["bro_id"], name: "index_reviews_on_bro_id"
     t.index ["movie_id", "bro_id"], name: "index_reviews_on_movie_id_and_bro_id", unique: true
     t.index ["movie_id"], name: "index_reviews_on_movie_id"
