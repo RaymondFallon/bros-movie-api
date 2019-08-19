@@ -79,7 +79,8 @@
   { title: 'John Wick: Chapter 3 - Parabellum', director: 'Chad Stahelski'},
   { title: 'Pet Sematary', director: 'Kevin Kolsh & Dennis Widmyer'},
   { title: 'Replicas', director: 'Jeffrey Nacmanoff'},
-  { title: 'Them That Follow', director: 'Britt Poulton & Dan Savage'}
+  { title: 'Them That Follow', director: 'Britt Poulton & Dan Savage'},
+  { title: 'The Beach Bum', director: 'Harmony Korine'}
 ].each do |movie|
   Movie.where(movie).first_or_create!(year: 2019)
 end
